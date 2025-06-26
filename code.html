@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Préstamos Hipotecarios del Quindío | Créditos con garantía hipotecaria</title>
+    <meta name="description" content="Obtén liquidez inmediata con tu propiedad como garantía. Tasas fijas del 2% mensual, hasta el 50% del valor comercial. Aprobación en 24 horas.">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        :root {
+            --primary: #005f73;
+            --secondary: #0a9396;
+            --accent: #94d2bd;
+            --light: #e9d8a6;
+            --dark: #001219;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            scroll-behavior: smooth;
+        }
+        
+        .hero {
+            background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('https://images.unsplash.com/photo-1632186314851-6def3285cf66?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');
+            background-size: cover;
+            background-position: center;
+        }
+        
+        .service-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+        }
+        
+        .btn-primary {
+            background-color: var(--primary);
+            transition: all 0.3s ease;
+        }
+        
+        .btn-primary:hover {
+            background-color: var(--secondary);
+            transform: translateY(-2px);
+        }
+        
+        .animate-bounce-slow {
+            animation: bounce 2s infinite;
+        }
+        
+        @keyframes bounce {
+            0%, 100% {
+                transform: translateY(0);
+            }
+            50% {
+                transform: translateY(-10px);
+            }
+        }
+        
+        .file-upload {
+            border: 2px dashed #ccc;
+            border-radius: 8px;
+            padding: 20px;
+            text-align: center;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+        
+        .file-upload:hover {
+            border-color: var(--primary);
+            background-color: rgba(0, 95, 115, 0.05);
+        }
+        
+        .conditions-card {
+            background: linear-gradient(135deg, rgba(0, 95, 115, 0.1) 0%, rgba(148, 210, 189, 0.1) 100%);
+            border: 1px solid rgba(0, 95, 115, 0.2);
+            border-radius: 12px;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header/Navbar -->
+    <header class="bg-white shadow-md sticky top-0 z-50">
+        <nav class="container mx-auto px-6 py-4">
+            <div class="flex justify-between items-center">
+                <div class="flex items-center space-x-2">
+                    <i class="fas fa-home text-2xl text-blue-600"></i>
+                    <span class="text-xl font-bold text-blue-600">Préstamos Hipotecarios del Quindío</span>
+                </div>
+                
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="#inicio" class="text-gray-700 hover:text-blue-600">Inicio</a>
+                    <a href="#servicios" class="text-gray-700 hover:text-blue-600">Servicios</a>
+                    <a href="#documentacion" class="text-gray-700 hover:text-blue-600">Documentación</a>
+                    <a href="#solicitud" class="text-gray-700 hover:text-blue-600">Solicitud</a>
+                    <a href="#contacto" class="text-gray-700 hover:text-blue-600">Contacto</a>
+                </div>
+                
+                <button class="md:hidden focus:outline-none" id="mobile-menu-button">
+                    <i class="fas fa-bars text-2xl text-gray-700"></i>
+                </button>
+            </div>
+            
+            <!-- Mobile menu -->
+            <div class="md:hidden hidden mt-4" id="mobile-menu">
+                <a href="#inicio" class="block py-2 text-gray-700 hover:text-blue-600">Inicio</a>
+                <a href="#servicios" class="block py-2 text-gray-700 hover:text-blue-600">Servicios</a>
+                <a href="#documentacion" class="block py-2 text-gray-700 hover:text-blue-600">Documentación</a>
+                <a href="#solicitud" class="block py-2 text-gray-700 hover:text-blue-600">Solicitud</a>
+                <a href="#contacto" class="block py-2 text-gray-700 hover:text-blue-600">Contacto</a>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="inicio" class="hero text-white py-20 md:py-32">
+        <div class="container mx-auto px-6 text-center">
+            <h1 class="text-4xl md:text-6xl font-bold mb-6 animate-bounce-slow">Financiamiento seguro sobre tu propiedad</h1>
+            <p class="text-xl md:text-2xl mb-10 max-w-3xl mx-auto">Obtén liquidez inmediata respaldada por tu inmueble con tasas fijas del 2% mensual. Aprobación en 24 horas.</p>
+            <div class="flex flex-col md:flex-row justify-center space-y-4 md:space-y-0 md:space-x-6">
+                <a href="#solicitud" class="btn-primary px-8 py-3 rounded-full font-bold text-white">Solicitar Ahora</a>
+                <a href="#documentacion" class="bg-white px-8 py-3 rounded-full font-bold text-blue-600 hover:bg-gray-100">Ver Documentación</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="py-16 bg-gray-50">
+        <div class="container mx-auto px-6">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="text-center p-6 bg-white rounded-lg shadow-md">
+                    <div class="text-blue-600 mb-4">
+                        <i class="fas fa-percentage text-4xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2">Tasa Fija 2% Mensual</h3>
+                    <p class="text-gray-600">Tasa de interés fija durante toda la vigencia del préstamo sin cambios sorpresa.</p>
+                </div>
+                
+                <div class="text-center p-6 bg-white rounded-lg shadow-md">
+                    <div class="text-blue-600 mb-4">
+                        <i class="fas fa-stopwatch text-4xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2">Aprobación en 24 Horas</h3>
+                    <p class="text-gray-600">Proceso ágil con respuesta rápida después de recibir toda la documentación.</p>
+                </div>
+                
+                <div class="text-center p-6 bg-white rounded-lg shadow-md">
+                    <div class="text-blue-600 mb-4">
+                        <i class="fas fa-home text-4xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2">Hasta el 50% del Valor</h3>
+                    <p class="text-gray-600">Financiamos hasta el 50% del valor comercial de tu propiedad.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="servicios" class="py-20 bg-white">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl md:text-4xl font-bold text-center mb-12 text-blue-600">Nuestro Servicio</h2>
+            
+            <div class="max-w-4xl mx-auto bg-gray-50 rounded-xl shadow-lg overflow-hidden">
+                <div class="md:flex">
+                    <div class="md:w-1/2">
+                        <img src="https://images.unsplash.com/photo-1560518883-ce09059eeffa?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Préstamos hipotecarios" class="w-full h-full object-cover">
+                    </div>
+                    <div class="p-8 md:w-1/2">
+                        <h3 class="text-2xl font-bold mb-4 text-blue-600">Préstamos con Garantía Hipotecaria</h3>
+                        <p class="text-gray-600 mb-6">Obtén liquidez inmediata utilizando tu propiedad como garantía con las mejores condiciones del mercado.</p>
+                        
+                        <div class="space-y-4 mb-8">
+                            <div class="flex items-start">
+                                <i class="fas fa-check-circle text-green-500 mt-1 mr-3"></i>
+                                <div>
+                                    <h4 class="font-bold text-gray-800">Monto del préstamo</h4>
+                                    <p class="text-gray-600">Hasta el 50% del valor comercial de tu inmueble</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start">
+                                <i class="fas fa-check-circle text-green-500 mt-1 mr-3"></i>
+                                <div>
+                                    <h4 class="font-bold text-gray-800">Tasa de interés</h4>
+                                    <p class="text-gray-600">2% mensual fijo - sin variaciones</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start">
+                                <i class="fas fa-check-circle text-green-500 mt-1 mr-3"></i>
+                                <div>
+                                    <h4 class="font-bold text-gray-800">Plazos flexibles</h4>
+                                    <p class="text-gray-600">Mínimo 6 meses - Abonos a capital desde el 3er mes</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start">
+                                <i class="fas fa-check-circle text-green-500 mt-1 mr-3"></i>
+                                <div>
+                                    <h4 class="font-bold text-gray-800">Proceso rápido</h4>
+                                    <p class="text-gray-600">Aprobación en máximo 24 horas hábiles</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <a href="#solicitud" class="inline-block bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg font-bold transition duration-300">Solicitar Financiamiento</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Documentation Section -->
+    <section id="documentacion" class="py-20 bg-gray-100">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl md:text-4xl font-bold text-center mb-12 text-blue-600">Documentación Requerida</h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+                <div class="conditions-card p-8">
+                    <h3 class="text-xl font-bold text-blue-600 mb-4">Para personas naturales:</h3>
+                    <ul class="space-y-3 text-gray-700">
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-green-500 mt-1 mr-2"></i>
+                            <span>Copia del documento de identidad</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-green-500 mt-1 mr-2"></i>
+                            <span>Certificado de tradición y libertad del inmueble (no mayor a 15 días)</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-green-500 mt-1 mr-2"></i>
+                            <span>Paz y salvo de pago de impuestos y valorización</span>
+                        </li>
+                    </ul>
+                </div>
+                
+                <div class="conditions-card p-8">
+                    <h3 class="text-xl font-bold text-blue-600 mb-4">Para empresas:</h3>
+                    <ul class="space-y-3 text-gray-700">
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-green-500 mt-1 mr-2"></i>
+                            <span>Certificado de existencia y representación legal</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-green-500 mt-1 mr-2"></i>
+                            <span>Documento de identidad del representante legal</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-green-500 mt-1 mr-2"></i>
+                            <span>Certificado de tradición y libertad del inmueble (no mayor a 15 días)</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-green-500 mt-1 mr-2"></i>
+                            <span>Paz y salvo de pago de impuestos y valorización</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Loan Application Section -->
+    <section id="solicitud" class="py-20 bg-white">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl md:text-4xl font-bold text-center mb-12 text-blue-600">Solicita tu Préstamo</h2>
+            
+            <div class="max-w-2xl mx-auto bg-gray-50 p-8 rounded-xl shadow-lg">
+                <form id="credit-application" action="https://formsubmit.co/tucorreo@example.com" method="POST">
+                    <input type="hidden" name="_subject" value="Nueva solicitud de préstamo">
+                    <input type="hidden" name="_template" value="table">
+                    
+                    <div class="mb-6">
+                        <label for="full-name" class="block text-gray-700 font-medium mb-2">Nombre Completo *</label>
+                        <input type="text" id="full-name" name="full-name" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent" placeholder="Ej: Juan Pérez Gómez" required>
+                    </div>
+                    
+                    <div class="mb-6">
+                        <label for="email" class="block text-gray-700 font-medium mb-2">Correo Electrónico *</label>
+                        <input type="email" id="email" name="email" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent" placeholder="Ej: juan@example.com" required>
+                    </div>
+                    
+                    <div class="mb-6">
+                        <label for="phone" class="block text-gray-700 font-medium mb-2">Número de Teléfono *</label>
+                        <input type="tel" id="phone" name="phone" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent" placeholder="Ej: 3123456789" required>
+                    </div>
+                    
+                    <div class="mb-6">
+                        <label for="loan-amount" class="block text-gray-700 font-medium mb-2">Monto Solicitado (COP) *</label>
+                        <div class="relative">
+                            <span class="absolute left-3 top-3 text-gray-500">$</span>
+                            <input type="number" id="loan-amount" name="loan-amount" class="w-full pl-8 pr-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent" placeholder="Ej: 150.000.000" min="1000000" step="100000" required>
+                        </div>
+                    </div>
+                    
+                    <div class="mb-6">
+                        <label class="block text-gray-700 font-medium mb-2">Certificado de Tradición y Libertad *</label>
+                        <div class="file-upload bg-white p-4 rounded-lg border border-gray-300">
+                            <div class="flex flex-col items-center justify-center">
+                                <i class="fas fa-cloud-upload-alt text-4xl text-blue-500 mb-2"></i>
+                                <p class="text-gray-600 mb-1">Haz clic para subir tu documento</p>
+                                <p class="text-sm text-gray-500">Certificado no mayor a 15 días (PDF, JPG, PNG - Máx. 5MB)</p>
+                                <input type="file" id="deed-certificate" name="deed-certificate" class="hidden" accept=".pdf,.jpg,.jpeg,.png" required>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="mb-6">
+                        <div class="flex items-start">
+                            <input type="checkbox" id="terms" name="terms" class="mt-1 mr-2" required>
+                            <label for="terms" class="text-gray-700 text-sm">
+                                Acepto los <a href="#" class="text-blue-600 hover:underline">términos y condiciones</a> y autorizo el tratamiento de mis datos personales según la <a href="#" class="text-blue-600 hover:underline">política de privacidad</a>.
+                            </label>
+                        </div>
+                    </div>
+                    
+                    <button type="submit" class="w-full bg-blue-600 hover:bg-blue-700 text-white font-bold py-3
